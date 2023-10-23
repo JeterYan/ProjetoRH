@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salario</title>
+    <link rel="stylesheet" href="Salario.css">
+    <script>
+        function somar() {
+            let salarioBruto = parseFloat(document.getElementById("quantity").value);
+            let inss = 0.11;
+            let irrf = 0.275;
+            let descontoInss = salarioBruto * inss;
+            let baseIrrf = salarioBruto - descontoInss;
+            let descontoIrrf = baseIrrf * irrf;
+            let salarioLiquido = salarioBruto - descontoInss - descontoIrrf;
+
+            descontoInss = descontoInss.toFixed(2);
+            descontoIrrf = descontoIrrf.toFixed(2);
+            salarioLiquido = salarioLiquido.toFixed(2);
+
+            let result = `Desconto INSS: R$ ${descontoInss}<br>Desconto IRRF: R$ ${descontoIrrf}<br>Salario Líquido: R$ ${salarioLiquido}`;
+
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+    
+    <section class="showcase">
+        <header>
+            <h2 class="logo">Salario</h2>
+            <div class="toggle"></div>
+        </header>
+        
+        <div class="overlay"></div>
+        <div class="text">
+            <h2>Vamos calcular os impostos do seu salario! </h2> 
+            <label class="label" for="quantity">Digite seu salario abaixo</label><br>
+            <input type="number" id="quantity">
+            <button class="somar" onclick="somar()">Somar</button><br><br>
+            <p class="result" id="result"></p>
+            
+            <a class="voltar" href="/Home/Home.html">Voltar</a>
+        </div>
+    </section>
+  
+</body>
+</html>

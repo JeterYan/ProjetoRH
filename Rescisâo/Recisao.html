@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recisão</title>
+    <link rel="stylesheet" href="Recisao.css">
+    <script src="R"></script>
+</head>
+<body>
+    
+  <section class="showcase">
+    <header>
+      <h2 class="logo">Recisão</h2>
+    </header>
+
+        <div class="overlay"></div>
+        <div class="text">
+          <h2>Calculadora de Rescisão</h2>
+            
+        <div class="salario">
+          <label for="salario">Salário:</label><br>
+          <input type="number" id="salario"><br>
+        </div>  
+        
+        <div class="tempo">
+          <label for="tempo">Tempo de Trabalho (em meses):</label><br>
+          <input type="number" id="tempo"><br>
+        </div>
+          <button class="somar" onclick="calcularRescisao()">Calcular</button>
+        
+        <div class="result">
+          <p>Saldo de Salário: R$ <span id="saldoSalario">0,00</span></p>
+          <p>Férias Proporcionais: R$ <span id="feriasProporcionais">0,00</span></p>
+          <p>Décimo Terceiro Proporcional: R$ <span id="decimoProporcional">0,00</span></p>
+          <p>Multa do FGTS: R$ <span id="multaFGTS">0,00</span></p>
+          <p>Total: R$ <span id="total">0,00</span></p>
+        </div>
+    
+      <script src="Recisão.js"></script>
+      <a href="/Home/Home.html">Voltar</a>
+    
+</body>
+</html>
